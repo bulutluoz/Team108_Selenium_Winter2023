@@ -1,6 +1,7 @@
 package day02_webelements_locators;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,8 +22,8 @@ public class C05_FindElements {
         driver.get("https://www.amazon.com");
         // arama kutusuna java yazip aratin
         WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
-        aramaKutusu.sendKeys("java");
-        aramaKutusu.submit();
+        aramaKutusu.sendKeys("java" + Keys.ENTER);
+        //aramaKutusu.submit();
 
         // arama sonuclarinda cikan resimlerdeki yazilari yazdirin
 
