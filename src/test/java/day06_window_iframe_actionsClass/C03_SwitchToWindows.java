@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import utilities.TestBase;
 
-public class C03_SwitchWindows extends TestBase {
+public class C03_SwitchToWindows extends TestBase {
 
     @Test
     public void test01(){

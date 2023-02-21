@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
-public class C02_IFrame extends TestBase {
+public class C02_SwitchToIFrame extends TestBase {
 
 
     @Test
