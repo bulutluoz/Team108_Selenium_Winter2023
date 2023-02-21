@@ -39,6 +39,23 @@ public class C02_IFrame extends TestBase {
 
         WebElement yaziElementi = driver.findElement(By.tagName("p"));
         Assert.assertTrue(yaziElementi.isDisplayed());
+
+        // Elemental Selenium linkine click yapin
+        /*
+            Bir frame'e gecis yaptiktan sonra
+            oradan cikincaya veya baska bir frame'e gecinceye kadar
+            driver o frame icerisinde kalir
+
+            isimiz bittiginde veya baska frame'e gecmek istedigimizde
+            once calisacagimiz yere gecis yapmaliyiz
+         */
+
+        driver.switchTo().parentFrame(); // icice frame'lerde bir ust seviyeye cikar
+        //driver.switchTo().defaultContent();// direk anasayfaya cikar
+        driver.findElement(By.linkText("Elemental Selenium")).click();
+
+
         bekle(3);
+
     }
 }
