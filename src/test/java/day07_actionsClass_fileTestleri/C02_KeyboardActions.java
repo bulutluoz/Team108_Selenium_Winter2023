@@ -1,5 +1,6 @@
 package day07_actionsClass_fileTestleri;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -32,10 +33,13 @@ public class C02_KeyboardActions extends TestBase {
                 .sendKeys(Keys.ENTER)
                 .perform();
 
-
-
         //4- aramanin gerceklestigini test edin
+        String actualsonucYazisi = driver
+                    .findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"))
+                    .getText();
+        String expectedIcerik="Samsung A71";
 
+        Assert.assertTrue(actualsonucYazisi.contains(expectedIcerik));
         bekle(4);
     }
 
