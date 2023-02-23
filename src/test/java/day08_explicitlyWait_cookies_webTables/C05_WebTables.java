@@ -75,6 +75,7 @@ public class C05_WebTables extends TestBase {
         //        //tbody/tr[3]/td[5]
 
         String dataXpath= "//tbody/tr["+ satirNo + "]/td["+ sutunNo +"]";
+        //                //tbody/tr[1]/td[7]
 
         String istenenData = driver.findElement(By.xpath(dataXpath)).getText();
 
