@@ -8,11 +8,10 @@ import org.openqa.selenium.WebElement;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-import java.io.IOException;
+public class C07_ReusableMethodsElementSs extends TestBase {
 
-public class C06_ReusableMethodsTumSayfa extends TestBase {
     @Test
-    public void test01() {
+    public void test01(){
         // amazon anasayfaya gidin
         driver.get("https://www.amazon.com");
 
@@ -22,18 +21,15 @@ public class C06_ReusableMethodsTumSayfa extends TestBase {
 
         // Sonuclarin Nutella icerdigini test edin
 
-        String actualSonucYazisi = driver.findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"))
-                .getText();
+        WebElement sonucYaziElementi= driver.findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"));
+        String actualSonucYazisi =sonucYaziElementi.getText();
 
         String expectedIcerik = "Nutella";
 
         Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
 
-        // ve rapora eklenmek icin tum sayfanin fotografini cekin
+        // ve rapora eklenmek icin sonuc yazisi elementinin fotografini cekin
 
-        ReusableMethods.tumSayfaScreenshot(driver);
-
+        ReusableMethods.webelementScreenshot(sonucYaziElementi);
     }
-
-
 }
